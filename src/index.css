@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 33 23% 23%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 33 23% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 33 23% 23%;
+
+    --primary: 141 40% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 46 100% 50%;
+    --secondary-foreground: 33 23% 23%;
+
+    --muted: 120 8% 95%;
+    --muted-foreground: 33 23% 45%;
+
+    --accent: 141 30% 15%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 120 8% 88%;
+    --input: 120 8% 88%;
+    --ring: 141 40% 20%;
+
+    --radius: 0.5rem;
+
+    /* Custom argan colors */
+    --argan-green: 141 40% 20%;
+    --argan-green-light: 141 40% 30%;
+    --argan-yellow: 46 100% 50%;
+    --argan-yellow-light: 46 100% 60%;
+    --argan-earth: 33 23% 23%;
+    --argan-earth-light: 33 23% 45%;
+    --argan-sage: 120 20% 85%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--argan-green)), hsl(var(--argan-green-light)));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--argan-yellow)), hsl(var(--argan-yellow-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--argan-green) / 0.9), hsl(var(--argan-earth) / 0.8));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--argan-green) / 0.1);
+    --shadow-natural: 0 8px 32px hsl(var(--argan-earth) / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 33 23% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 33 23% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 33 23% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 141 40% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 46 80% 60%;
+    --secondary-foreground: 33 23% 10%;
+
+    --muted: 33 15% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 141 30% 25%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 33 15% 18%;
+    --input: 33 15% 18%;
+    --ring: 141 40% 35%;
+
+    /* Dark mode argan colors */
+    --argan-green: 141 40% 35%;
+    --argan-green-light: 141 40% 45%;
+    --argan-yellow: 46 80% 60%;
+    --argan-yellow-light: 46 80% 70%;
+    --argan-earth: 0 0% 95%;
+    --argan-earth-light: 0 0% 75%;
+    --argan-sage: 120 10% 25%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
